@@ -5,6 +5,12 @@ This repository contains the solution for the Dynamic Programming (Markov Decisi
 ## Overview
 This project tackles the challenge of calculating an optimal policy and value function for an autonomous survey robot operating on a distant planet. The environment is modeled as a stationary Markov Decision Process (MDP) over a discrete $M \times N$ grid. The ultimate goal is to maximize the expected profit while navigating various terrain types and dealing with stochastic transitions (e.g., slipping in swamps or unpredictable teleports).
 
+<p align="center">
+  <img src="assets/value.png" alt="Value Function" width="45%" style="margin-right: 2%;"/>
+  <img src="assets/policy.png" alt="Derived Policy" width="45%"/>
+</p>
+<p align="center"><i><b>Left:</b> The computed Value Function displaying the highest expected returns for each grid state. <b>Right:</b> The extracted deterministic Policy driving the autonomous robot toward the goal while avoiding cliffs and maximizing wonderland rewards.</i></p>
+
 ## The Problem
 * **Objective:** Compute an optimal policy for the robot to reach a `GOAL` location from a `START` base while maximizing profit.
 * **Challenges:** Modeling the transition probabilities properly for different terrain types and handling stochasticity in movement (success probabilities vs splits vs breakdown events) and applying both Value and Policy Iteration correctly.
